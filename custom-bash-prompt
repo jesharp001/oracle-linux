@@ -4,7 +4,13 @@
 # -- Please be kind to spiders.
 # -- ========================================================================================
 # Set bash prompt to reflect environment variables -- copy these 2 lines to the ~/.bashrc file.
-# Color coded for ease of visibility. 
+#
+# \u = username \h = hostname \w = current working directory
+#
+# example prompt:
+# [SID]user@hostname ssh-session~ $
+#
+# Color coded for ease of visibility.
 # Color values used:
 # [\e[0;31m\ = non-bold RED
 # [\e[0;35m\ = non-bold PURPLE
@@ -12,5 +18,10 @@
 # [\e[0;33m\ = non-bold YELLOW
 # [\e[m\ = reset to white
 # -------------------------------------------------------------------------------------------
-# export OSID=${ORACLE_SID}
-# export PS1='\[\e[0;31m\][${OSID}]\[\e[0;35m\]\u\[\e[0;37m\]@\h\e[0;33m${text}\e[m\w $ '
+# Check if session is an ssh session.
+if [ -n "$SSH_CLIENT" ]; then text=" ssh-session"
+fi
+#
+# If it's an ssh session then the above will be printed in the prompt.
+export OSID=${ORACLE_SID}
+export PS1='\[\e[0;31m\][${OSID}]\[\e[0;35m\]\u\[\e[0;37m\]@\h\e[0;33m${text}\e[m\w $ '
