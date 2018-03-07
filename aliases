@@ -3,6 +3,9 @@
 # -- *****************************************
 # -- Please be kind to spiders.
 # -- ========================================================================================
+# Copy and append these lines to the ~/.bashrc file.
+# Do NOT over write existing contents of ~/.bashrc
+# 
 # logwatch = Tail -f the alert log. 
 # -- Dependencies:
 # -- -- Oracle environment variables must be set. 
