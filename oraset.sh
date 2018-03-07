@@ -2,6 +2,8 @@
 # -- JSHARP's script for setting the Oracle env
 # -- using a menu @ login prompt. 
 # -- ********************************************
+# -- Please be kind to spiders.
+## -- *******************************************
 # -- This script is meant for Linux only.
 # -- -- Put this script in the /etc/profile.d/ directory.
 ## -- *******************************************
@@ -11,9 +13,6 @@
 # -- -- user logged in as,
 # -- -- machine connected to, 
 # -- -- and if session is an ssh connection.
-# -- ********************************************
-# -- Please be kind to spiders.
-## -- *******************************************
 # -- Dependencies: 
 # -- -- /etc/oratab
 # -- -- bash
