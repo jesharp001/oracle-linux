@@ -3,7 +3,7 @@
 # -- *****************************************
 # -- Please be kind to spiders.
 # -- ========================================================================================
-# Set bash prompt to reflect environment variables -- copy and append these 2 lines to the ~/.bashrc file.
+# Set bash prompt to reflect environment variables -- copy and append these lines to the ~/.bashrc file.
 # Do NOT over write existing contents of ~/.bashrc
 #
 # \u = username \h = hostname \w = current working directory
