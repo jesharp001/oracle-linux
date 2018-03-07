@@ -16,6 +16,7 @@
 ## -- *******************************************
 # -- Dependencies: 
 # -- -- /etc/oratab
+# -- -- bash
 ## -- =====================================================
 #
 # Check dependencies: 
@@ -28,6 +29,8 @@ fi
 ##
 # Ask user which database: 
 if [ -z $1 ]; then
+# egrep -v to exclude comment lines in oratab
+# commented using '#' OR (=|) commented using '\*'
     SIDLIST=$(egrep -v '#|\*' ${OTAB} | cut -f1 -d:)
     PS3='SID? '
     select sid in ${SIDLIST}; do
