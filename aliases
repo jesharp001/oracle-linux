@@ -1,0 +1,13 @@
+## -- =======================================================================================
+# -- JSHARP's Linux aliases
+# -- *****************************************
+# -- Please be kind to spiders.
+# -- ========================================================================================
+# logwatch = Tail -f the alert log. 
+# -- Dependencies:
+# -- -- Oracle environment variables must be set. 
+# -- -- OFA best practices must be in use.
+# --------------------------------------------
+# Set the oracle sid to lowercase letters to match OFA best practices
+lower_osid=${ORACLE_SID,,}
+alias logwatch="tail -f ${ORACLE_BASE}/diag/rdbms/${lower_osid}/${ORACLE_SID}/trace/alert_${ORACLE_SID}.log"
