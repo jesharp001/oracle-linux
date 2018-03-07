@@ -31,6 +31,9 @@ fi
 if [ -z $1 ]; then
 # egrep -v to exclude comment lines in oratab
 # commented using '#' OR (=|) commented using '\*'
+# cut command to exclude parts that != the oracle SID
+# -- cut -f1 parameter = field 1
+# -- cut -d: parameter = delimiter=':'
     SIDLIST=$(egrep -v '#|\*' ${OTAB} | cut -f1 -d:)
     PS3='SID? '
     select sid in ${SIDLIST}; do
